@@ -239,11 +239,8 @@ def information_authors(request, author_id):
     }
     return render(request, 'forms/information.html', context)
 
-first = name = 'loghman'
-last_name = 'moradi'
-
-
-
+username = 'you'
+password = '1234'
 
 
 
