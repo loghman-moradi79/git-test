@@ -1,0 +1,16 @@
+{% extends 'parent/base.html' %}
+{% block title %} edit account {% endblock %}
+{% block content %}
+  <h2>حذف پست </h2>
+    <p> مطمئن هستی ؟ ({{ post.title }})آیا از حذف پست  </p>
+    <br>
+    <form method="post">
+         {% csrf_token %}
+    <input type="submit" value="بلی">
+    </form>
+    <br>
+    <form method="post" action="{% url 'sabzwebapp:profile' %}">
+         {% csrf_token %}
+    <input type="submit" value="خیر">
+    </form>
+{% endblock %}

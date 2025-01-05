@@ -1,0 +1,10 @@
+{% extends 'parent/base.html' %}
+{% block title %} author list {% endblock %}
+{% block content %}
+  <h2>لیست نویسندگان </h2>
+      {% for author in authors %}
+        <img width="50" height="50" src="{{author.photo.url}}">
+        <a href="{% url 'sabzwebapp:information_authors' author.id %}">&#9632; {{ author.user.username }}</a>
+        <br>
+      {% endfor %}
+{% endblock %}

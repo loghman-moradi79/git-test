@@ -1,0 +1,9 @@
+<form method="get" action="{% url 'sabzwebapp:post_search' %}">
+    <input type="text" name="query" placeholder="لطفا کلمه مورد نظر را وارد کنید...">
+    <button type="submit">جست و جو</button>
+</form>
+<br>
+<a href="{% url 'sabzwebapp:profile' %}">پروفایل</a>
+<br>
+<a href="{% url 'sabzwebapp:login' %}">ورود</a>
+<a href="{% url 'sabzwebapp:register' %}">ثبت نام</a>

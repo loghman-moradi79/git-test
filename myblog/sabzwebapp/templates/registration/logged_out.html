@@ -1,0 +1,16 @@
+{% extends 'parent/base.html' %}
+{% block title %} logout {% endblock %}
+{% block content %}
+    <h4>شما خارج شدید...</h4>
+        <form action="{% url 'sabzwebapp:login' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="ورود مجدد">
+    </form>
+
+{% endblock %}
+
+
+
+
+
+

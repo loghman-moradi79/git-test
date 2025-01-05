@@ -1,0 +1,29 @@
+{% extends 'parent/base.html' %}
+{% block title %} author list {% endblock %}
+{% block content %}
+  <h2>درباره نویسنده</h2>
+<ol style="--length: {{ posts|length }}" role="list">
+    {% if author.photo %}
+        <img src="{{author.photo.url}}">
+    {% endif %}
+        <h4>{{ author.user }} :نام کاربری </h4>
+        <h4>{{ author.date_of_birth }} :تاریخ تولد </h4>
+        <h4> بایو: {{ author.bio }} </h4>
+        <h4> شغل: {{ author.job }} </h4>
+    {% if posts %}
+        {% for post in posts %}
+        <li style="--i: {{ forloop.counter }}">
+        <h3>
+        <a href="{{ post.get_absolute_url }}">{{post.title}}</a>
+        </h3>
+        <p>{{post.description|truncatewords:4}}</p>
+        <br>
+        <br>
+        <img src="{{ post.images.first.file_image.url}}" alt="{{ post.image.first.title}}">
+        </li>
+        {% endfor %}
+    {% else %}
+        <p>هنوز هیچ پستی توسط این کاربر وجود ندارد.</p>
+    {% endif %}
+</ol>
+{% endblock %}

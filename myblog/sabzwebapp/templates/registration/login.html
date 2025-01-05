@@ -1,0 +1,13 @@
+{% extends 'parent/base.html' %}
+{% block title %} login {% endblock %}
+{% block content %}
+  <h2>لطفا نام کاربری و رمز عبور را وارد کنید...</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="next" value="{{ next }}">
+    <input type="submit" value="ورود">
+    <br>
+    <a href="{% url 'sabzwebapp:password_reset' %}">آیا رمز عبور خود را فراموش کرده اید...</a>
+  </form>
+{% endblock %}

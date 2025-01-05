@@ -1,0 +1,37 @@
+{% extends 'parent/base.html' %}
+{% load jformat %}
+{% block title %} create post {% endblock %}
+{% block content %}
+    <h2>create post</h2>
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+        <br>
+        {% for img in post.images.all %}
+            <img width="100" height="100" src="{{ img.file_image.url }}" alt="{{ img.title}}">
+            <a href="{% url 'sabzwebapp:delete_image' img.id %}">حذف تصویر</a>
+        {% endfor %}
+        <br>
+        <br>
+        <input type="submit" value="ارسال">
+    </form>
+
+    <script>
+        // بعد از چند ثانیه پیام‌ها را مخفی کن
+        setTimeout(function() {
+            const messages = document.querySelector('.messages');
+            if (messages) {
+                messages.style.display = 'none'; // پیام‌ها را مخفی کن
+            }
+        }, 5000); // در اینجا ۵۰۰۰ میلی‌ثانیه = ۵ ثانیه
+    </script>
+{% endblock %}
