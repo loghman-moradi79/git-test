@@ -12,8 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os.path
 from pathlib import Path
 
-from django.conf import settings
-from django.conf.global_settings import MEDIA_URL, MEDIA_ROOT, STATIC_ROOT, LOGIN_URL, LOGIN_REDIRECT_URL
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -83,8 +82,6 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -102,8 +99,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.1/topics/i18n/
 
 LANGUAGE_CODE = 'fa'
 

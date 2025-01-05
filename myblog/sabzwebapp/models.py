@@ -1,5 +1,3 @@
-from dataclasses import fields
-
 from django.db import models
 from django.contrib.auth.models import User
 from django.forms import ImageField, ChoiceField
@@ -10,10 +8,6 @@ from django.urls import reverse
 from django_jalali.db import models as jmodels
 from django.template.defaultfilters import slugify
 from django_resized import ResizedImageField
-
-
-# Create your models here.
-
 
 class PublishedManager(models.Manager):
     def get_queryset(self):
