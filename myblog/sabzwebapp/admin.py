@@ -54,9 +54,7 @@ class AccountAdmin(admin.ModelAdmin):
     list_display = ['user', 'bio', 'date_of_birth', 'job']
 
 
-new_test = 'im learning git'
 
-ticketing = 'your are website good, thank ypu'
 
 
 

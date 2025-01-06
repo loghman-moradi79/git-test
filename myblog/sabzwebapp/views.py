@@ -241,6 +241,8 @@ def information_authors(request, author_id):
 
 
 whats_your_name = 'my name is loghman'
+username = 'loghman'
+password = "1111"
 
 
 
