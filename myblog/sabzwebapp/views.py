@@ -240,7 +240,8 @@ def information_authors(request, author_id):
     return render(request, 'forms/information.html', context)
 
 
-whats_your_name = 'my name is loghman'
+username = 'ali'
+age = 23
 
 
 
