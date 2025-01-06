@@ -240,8 +240,7 @@ def information_authors(request, author_id):
     return render(request, 'forms/information.html', context)
 
 
-comments = 'the comment is post'
-
+whats_your_name = 'my name is loghman'
 
 
 
