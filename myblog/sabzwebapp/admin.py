@@ -4,7 +4,7 @@ from django_jalali.admin.filters import JDateFieldListFilter
 
 from .models import *
 from .templatetags.blog_tags import register
-
+from .views import ticket
 
 admin.sites.AdminSite.site_header = "پنل مدیریت جنگو"
 admin.sites.AdminSite.site_title = "پنل"
@@ -57,5 +57,5 @@ class AccountAdmin(admin.ModelAdmin):
 abcd = '0000'
 new_test = 'im learning git'
 
-
+ticketing = 'your are website good, thank ypu'
 
