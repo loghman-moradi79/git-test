@@ -54,8 +54,9 @@ class AccountAdmin(admin.ModelAdmin):
     list_display = ['user', 'bio', 'date_of_birth', 'job']
 
 
-abcd = '0000'
 new_test = 'im learning git'
+
+
 
 
 
